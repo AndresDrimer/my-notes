@@ -84,27 +84,42 @@ form{
     max-width:700px;
     margin:auto;
 }
-.addBtn{
+
+.outerCircle {
     position: absolute;
     top:3%;
     right:0;
     display: flex;
     justify-content: flex-end;
     margin-right: 5%;
+    background: linear-gradient( var(--red), var(--blue)); /* Cambia los colores según tus necesidades */
+    border-radius: 50%;
+    padding: 6px; /* Ajusta este valor para cambiar el grosor del borde */
+ }
+ 
+ .addBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--gray);
     border-radius: 50%;
-    padding:8px 16px;
-    border:3px solid var(--light-gray);
-}
-.addBtn > a > p{
+    padding: 8px 16px;
+ }
+ .addBtn:hover{     
+    background-color: var(--light-gray);
+ }
+ .addBtn > a > p {
     color: white;
-
-  
     text-decoration-color: var(--red);
-}
-.addBtn > a:hover{
-    scale:1.2;
-}
+ }
+ 
+ .addBtn > a:hover {
+    transform: scale(1.2);
+ }
+ .outerCircle:hover{
+    transition: 1s;
+    background: linear-gradient( var(--blue), var(--red));
+ }
 #home-title{
     margin-top:100px;
 }

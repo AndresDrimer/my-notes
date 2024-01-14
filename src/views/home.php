@@ -10,10 +10,13 @@ if (session_status() == PHP_SESSION_NONE) {
 $uuid = $_SESSION["uuid"];
 ?>
 
-
+<div class="outerCircle">
 <div class="addBtn">
     <a href="?view=create"><p>new <br>IDEA</p></a>
 </div>
+</div>
+
+
 <h1 class="section-title" id="home-title"><?php echo $_SESSION["username"]?>´s IDEAS</h1>
 
 <?php
