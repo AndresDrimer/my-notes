@@ -27,21 +27,29 @@ header > div {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-   margin-right:32px;
+
 }
 .logo-title{
     color:var(--blue);
     text-transform: uppercase;
     font-size: 28px;
+
 }
 .logo-subtitle{
     color:var(--red);
 margin-top: -28px;
 letter-spacing: 2px;
-
 font-size: 16px;
 }
+#logout{
+  width:20px;
 
+}
+#logout-container{
+width:30px;
+margin-left:auto;
+padding-right:5%;
+}
 h1{
     text-align: center;
 }
@@ -77,18 +85,28 @@ form{
     margin:auto;
 }
 .addBtn{
+    position: absolute;
+    top:3%;
+    right:0;
     display: flex;
     justify-content: flex-end;
     margin-right: 5%;
+    background-color: var(--gray);
+    border-radius: 50%;
+    padding:8px 16px;
+    border:3px solid var(--light-gray);
 }
 .addBtn > a > p{
-    color: var(---blue);
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
+    color: white;
+
+  
     text-decoration-color: var(--red);
 }
 .addBtn > a:hover{
     scale:1.2;
+}
+#home-title{
+    margin-top:100px;
 }
 input[type="text"],textarea{
     text-indent: 4px;
@@ -192,3 +210,107 @@ input[type="submit"]:hover, input[type="submit"]:active{
 .back-btn{
     margin-left:16px;
 }
+.sign-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media(min-width:768px){
+    .sign-container{
+        flex-direction: row;
+    }
+}
+.sign-container > div {
+    display: grid;
+    place-content: center;
+}
+#sign-image-hero{
+    width: 150px;
+    padding:36px;
+}
+
+/*SIGN VIEW TOGGLER*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin:0 auto 24px auto;
+
+}
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /*label*/
+  .label{
+    position: absolute;
+    margin-top:8px;
+  }
+  #label-register {
+    left: 80px;
+   }
+   #label-signup{
+    right: 80px; 
+   }
+  /*END OF TOGGLER´s CODE*/
+  #registerForm{
+    display:none;
+  }
+  #loginForm{
+    display:flex;
+  }

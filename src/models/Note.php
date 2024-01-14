@@ -7,12 +7,13 @@ use PDO;
 class Note extends Dbh{
 
     private $uuid;
-   
+    
 
-    public function __construct( private string $title, private string $content ){
+    public function __construct( private string $title, private string $content, private string $user_uuid ){
      
         parent::__construct();
         $this->uuid = uniqid();
+        $this->user_uuid = $user_uuid;
     }
 
     public function getUuid(){
@@ -20,6 +21,12 @@ class Note extends Dbh{
     }
     public function setUuid( $uuid ){
         $this->uuid = $uuid;
+    }
+    public function getUserUuid(){
+        return $this->user_uuid;
+    }
+    public function setUserUuid( $user_uuid ){
+        $this->user_uuid = $user_uuid;
     }
     public function getTitle(){
         return $this->title;
@@ -37,21 +44,24 @@ class Note extends Dbh{
         $dbh = new Dbh();
         $pdo = $dbh->connect();
         
-        $sql = "INSERT INTO notes (uuid, title, content) VALUES (:uuid, :title, :content)";
+        $sql = "INSERT INTO notes (uuid, title, content, user_uuid) VALUES (:uuid, :title, :content, :user_uuid)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":uuid", $this->uuid);
         $stmt->bindParam(":title", $this->title);
         $stmt->bindParam(":content", $this->content);
+        $stmt->bindParam(":user_uuid", $this->user_uuid);
         $stmt->execute();
     }
 
-    public static function getAll(){
+    public static function getAll($uuid){
         $dbh = new Dbh();
         $pdo = $dbh->connect();
         $notes = [];
 
-        $sql = "SELECT * FROM notes";
-        $stmt = $pdo->query($sql);
+        $sql = "SELECT * FROM notes WHERE user_uuid = :uuid";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":uuid", $uuid);
+        $stmt->execute();
        
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $note = Note::newNoteFromArray($row);
@@ -60,7 +70,7 @@ class Note extends Dbh{
         return $notes;
     }
     public static function newNoteFromArray($array){
-        $note = new Note($array['title'], $array['content']);
+        $note = new Note($array['title'], $array['content'], $array["uuid"]);
         $note->setUuid($array['uuid']);
         return $note;
     }

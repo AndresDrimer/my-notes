@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ob_end_clean();
         header("Location: ../../?view=create");
     } else {
-        $note = new Note($title, $content);
+        $uuid = $_SESSION["uuid"];
+        $note = new Note($title, $content, $uuid);
         $note->save();
         ob_end_clean();
         header("Location: ../../index.php");

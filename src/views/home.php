@@ -2,16 +2,22 @@
 require "src/includes/header.inc.php";
 
 use Andres\MyNotes\Models\Note;
+use Andres\MyNotes\Models\User;
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+   }
+$uuid = $_SESSION["uuid"];
 ?>
 
 
 <div class="addBtn">
-    <a href="?view=create"><p>+ new IDEA</p></a>
+    <a href="?view=create"><p>new <br>IDEA</p></a>
 </div>
-<h1 class="section-title">My IDEAS</h1>
+<h1 class="section-title" id="home-title"><?php echo $_SESSION["username"]?>´s IDEAS</h1>
 
 <?php
-$notes = Note::getAll();
+$notes = Note::getAll($uuid);
 
 foreach ($notes as $note) {
 ?>

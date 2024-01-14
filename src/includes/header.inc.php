@@ -14,5 +14,6 @@
     <div>
     <h3 class="logo-title">Don´t lose ideas</h3>
     <h4 class="logo-subtitle">Write them down!</h4></div>
+    <div id="logout-container"><a href="src/controllers/logout.php"><img src="public/logout.png" id="logout"></a></div>
     </header>
     <section>
