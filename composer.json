@@ -1,0 +1,18 @@
+{
+    "name": "andres/my-notes",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Andres\\MyNotes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AndresDrimer",
+            "email": "andresdrimer@hotmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
