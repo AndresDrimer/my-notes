@@ -7,6 +7,7 @@ use Andres\MyNotes\Models\User;
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
    }
+
 $uuid = $_SESSION["uuid"];
 ?>
 
@@ -17,7 +18,7 @@ $uuid = $_SESSION["uuid"];
 </div>
 
 
-<h1 class="section-title" id="home-title"><?php echo $_SESSION["username"]?>´s IDEAS</h1>
+<h1 class="section-title" id="home-title"><?php echo strtoupper($_SESSION["username"])?>´S IDEAS</h1>
 
 <?php
 $notes = Note::getAll($uuid);

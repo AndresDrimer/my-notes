@@ -14,9 +14,8 @@ if(isset($_SESSION["errorMsg"])){
 </div>
 <div>
 
+
 <label class="switch">
-
-
   <input type="checkbox" id="checkBoxSign">
   <span class="slider round">
   <span class="label" id="label-signup">Signup</span>

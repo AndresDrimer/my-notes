@@ -13,7 +13,7 @@ class Dbh {
     private $dbpass;
     private $dbcharset;
 
-    public function __construct() 
+    protected function __construct() 
     {
 
         require_once __DIR__ . '/../../vendor/autoload.php';
@@ -27,7 +27,7 @@ class Dbh {
         $this->dbcharset = $_ENV["DBCHARSET"];
     }
 
-    public function connect(){
+    protected function connect(){
         try {
         $dbh = new PDO("mysql:host=$this->dbhost;dbname=$this->dbname;charset=$this->dbcharset", $this->dbuser, $this->dbpass);
         return $dbh;
