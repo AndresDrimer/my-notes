@@ -26,7 +26,7 @@ if(isset($_SESSION["errorMsg"])){
 
     <form method="post" action="src/controllers/register_control.php" id="registerForm">
         <input type="hidden" name="register-form">
-    <input type="text" name="username" placeholder="Username...">
+    <input type="text" name="username" placeholder="Username..." autofocus>
     <input type="email" name="email" placeholder="Email...">
     <input type="password" name="password" placeholder="Password...">
     <input type="submit" value="Register New User">
@@ -34,7 +34,7 @@ if(isset($_SESSION["errorMsg"])){
     
     <form method="post" action="src/controllers/login_control.php" id="signupForm">
     <input type="hidden" name="signup-form">
-    <input type="text" name="username" placeholder="Username...">
+    <input type="text" name="username" placeholder="Username..." autofocus>
     <input type="password" name="password" placeholder="Password...">
     <input type="submit" value="Sign up">
     </form>
