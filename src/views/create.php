@@ -10,7 +10,7 @@ if(isset($_SESSION["errorMsg"])){
 
 
 <p class="back-btn"><a href="index.php">< back</a></p>
-<h1>New IDEA⚡</h1>
+<h1>New IDEA 💡</h1>
 <form action="src/controllers/create_control.php" method="post">
     <input type="text" name="title" placeholder="Title..." autofocus>
     <textarea name="content" placeholder="Content..."></textarea>
