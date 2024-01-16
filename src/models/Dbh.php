@@ -1,6 +1,6 @@
 <?php
 
-namespace Andres\MyNotes\Models;
+namespace Andres\MyNotes\models;
 use PDO;
 use PDOException;
 use Dotenv\Dotenv;

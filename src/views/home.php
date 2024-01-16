@@ -1,8 +1,8 @@
 <?php
 require "src/includes/header.inc.php";
 
-use Andres\MyNotes\Models\Note;
-use Andres\MyNotes\Models\User;
+use Andres\MyNotes\models\Note;
+use Andres\MyNotes\models\User;
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();

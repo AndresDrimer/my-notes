@@ -1,7 +1,7 @@
 <?php
 
-namespace Andres\MyNotes\Models;
-use Andres\MyNotes\Models\Dbh;
+namespace Andres\MyNotes\models;
+use Andres\MyNotes\models\Dbh;
 use PDO;
 use PDOException;
 

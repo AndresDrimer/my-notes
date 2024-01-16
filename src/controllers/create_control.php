@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
-use Andres\MyNotes\Models\Note;
+use Andres\MyNotes\models\Note;
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();

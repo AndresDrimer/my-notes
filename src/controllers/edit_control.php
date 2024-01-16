@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
-use Andres\MyNotes\Models\Note;
+use Andres\MyNotes\models\Note;
 
 if (count($_POST) > 0) {
     $title = $_POST['title'];

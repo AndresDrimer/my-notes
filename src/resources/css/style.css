@@ -71,7 +71,7 @@ section::after {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: -80px;
+  bottom: 0;
   left: 0;
   background-image: url("../../../public/lines_abstract.png");
   background-position: center;
@@ -163,7 +163,7 @@ input[type="submit"]:active {
   background-color: var(--blue);
 }
 input:focus {
-  border: 1px solid var(--red); /* Cambia 'blue' al color que prefieras */
+  border: 1px solid var(--red); 
 }
 .alert {
   position: absolute;
@@ -263,6 +263,7 @@ button {
   align-items: center;
   justify-content: center;
   height: calc(100vh - 104px - 40px - 5px - 5px - 30px);
+ 
 }
 @media (min-width: 415px) {
   .sign-container {

@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
-use Andres\MyNotes\Models\User;
+use Andres\MyNotes\models\User;
 
 if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["register-form"]) ){
     $username = $_POST["username"];
