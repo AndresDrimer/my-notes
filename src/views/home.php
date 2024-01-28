@@ -13,12 +13,12 @@ $uuid = $_SESSION["uuid"];
 
 <div class="outerCircle">
 <div class="addBtn">
-    <a href="?view=create"><p>new <br>IDEA</p></a>
+    <a href="?view=create"><p id="new-idea">new <br>IDEA</p></a>
 </div>
 </div>
 
 
-<h1 class="section-title" id="home-title"><?php echo strtoupper($_SESSION["username"])?>´S IDEAS</h1>
+<h1 class="section-title" id="home-title">My IDEAS</h1>
 
 <?php
 $notes = Note::getAll($uuid);

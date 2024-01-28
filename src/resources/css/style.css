@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300;400&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Honk&family=Noto+Sans+JP:wght@100;400;800&family=Sacramento&display=swap');
+
+/*FAMILY FONTS
+font-family: 'Honk', system-ui;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Sacramento', cursive;
+font-family: 'Caprasimo', serif;
+*/
 
 :root {
   --blue: #00a5a5;
@@ -7,10 +15,11 @@
   --orange: #f05467;
   --gray: #848595;
   --light-gray: #a2b3cb;
+  --yellow-ideas:#ffffa4;
 }
 body {
   background: var(--yellow);
-  font-family: "Marhey", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   color: var(--gray);
   position: relative;
   display: flex;
@@ -20,6 +29,7 @@ body {
 header {
   display: flex;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  align-items: ;
 }
 header > div {
   display: flex;
@@ -28,15 +38,22 @@ header > div {
   justify-content: center;
 }
 .logo-title {
-  color: var(--blue);
+  color: var(--gray);
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.logo-title > span{
+  letter-spacing: 1px;
 }
 .logo-subtitle {
   color: var(--red);
-  margin-top: -28px;
+  margin-top: -20px;
   letter-spacing: 2px;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: 'Sacramento', cursive;
+  align-self: flex-end;
+  transform: rotate(-5deg);
 }
 #logout {
   width: 20px;
@@ -63,7 +80,7 @@ section {
   flex-grow: 1;
   overflow: auto;
   background-position: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 section::after {
   content: "";
@@ -87,7 +104,7 @@ form {
 }
 .outerCircle {
   position: absolute;
-  top: 3%;
+  top: 2%;
   right: 0;
   display: flex;
   justify-content: flex-end;
@@ -135,8 +152,28 @@ form {
   animation: gradientMoves 0.3s  infinite;
   padding: 9px;
 }
+#new-idea{
+  font-family: 'Honk', system-ui;
+  font-size: 20px;
+}
 #home-title {
+  margin: 60px auto 20px auto;
+  font-family: 'Honk', system-ui;
+  font-size: 54px;
+  width:50%;
+
+  text-align: center;
+}
+@media(min-width:450px){
+  #home-title{
+    width:100%;
+    font-size: 64px;
+  }
+}
+#new-idea-title {
   margin-top: 100px;
+  font-family: 'Honk', system-ui;
+  font-size: 60px;
 }
 input[type="text"],
 textarea {
@@ -212,14 +249,19 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 .note-container-title::before {
   content: "🚀   ";
+
 }
 .note-container-title {
   width: 100%;
   flex-grow: 1;
   margin-right: auto;
+  font-family: 'Honk', system-ui;
+  font-size: 24px;
+
 }
 footer {
   display: flex;
